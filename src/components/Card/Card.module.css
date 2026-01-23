@@ -1,0 +1,52 @@
+.card {
+    background: var(--color-card-bg);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-md);
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--color-border);
+    transition: all var(--transition-base);
+    height: 100%;
+}
+
+.card.hover {
+    cursor: pointer;
+}
+
+.card.hover:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: var(--shadow-xl);
+    border-color: var(--color-primary);
+}
+
+/* Effet de brillance au hover */
+.card.hover::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg,
+            transparent 0%,
+            rgba(255, 255, 255, 0.1) 50%,
+            transparent 100%);
+    opacity: 0;
+    transition: opacity var(--transition-base);
+    border-radius: var(--radius-lg);
+    pointer-events: none;
+}
+
+.card.hover:hover::after {
+    opacity: 1;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .card {
+        padding: var(--spacing-sm);
+    }
+
+    .card.hover:hover {
+        transform: translateY(-4px) scale(1.01);
+    }
+}

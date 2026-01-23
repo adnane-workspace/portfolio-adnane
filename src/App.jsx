@@ -1,0 +1,35 @@
+import React from 'react';
+import { ThemeProvider } from './context/ThemeContext';
+import Navbar from './components/Navbar/Navbar';
+import Hero from './components/Hero/Hero';
+import Skills from './components/Skills/Skills';
+import Projects from './components/Projects/Projects';
+import Experience from './components/Experience/Experience';
+import Contact from './components/Contact/Contact';
+import Footer from './components/Footer/Footer';
+import styles from './App.module.css';
+
+/**
+ * Composant principal de l'application
+ */
+function App() {
+    return (
+        <ThemeProvider>
+            <div className={styles.app}>
+                <Navbar />
+
+                <main className={styles.main}>
+                    <Hero />
+                    <Skills />
+                    <Projects />
+                    <Experience />
+                    <Contact />
+                </main>
+
+                <Footer />
+            </div>
+        </ThemeProvider>
+    );
+}
+
+export default App;
