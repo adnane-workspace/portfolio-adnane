@@ -1,0 +1,187 @@
+.logoLoopRoot {
+    position: relative;
+    overflow-x: hidden;
+}
+
+.logoLoopRoot.vertical {
+    overflow-y: hidden;
+    overflow-x: visible;
+    height: 100%;
+    display: inline-block;
+}
+
+.logoLoopRoot.scaleOnHover {
+    padding-top: calc(var(--logoloop-logoHeight) * 0.1);
+    padding-bottom: calc(var(--logoloop-logoHeight) * 0.1);
+}
+
+/* Track container */
+.track {
+    display: flex;
+    will-change: transform;
+    user-select: none;
+    position: relative;
+    z-index: 0;
+}
+
+.track.vertical {
+    flex-direction: column;
+    height: max-content;
+    width: 100%;
+}
+
+.track.horizontal {
+    flex-direction: row;
+    width: max-content;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .track {
+        transform: none !important;
+    }
+}
+
+/* Logo list */
+.logoList {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.logoList.vertical {
+    flex-direction: column;
+}
+
+/* Logo item */
+.logoItem {
+    flex: none;
+    font-size: var(--logoloop-logoHeight);
+    line-height: 1;
+    margin-right: var(--logoloop-gap);
+}
+
+.logoItem.vertical {
+    margin-right: 0;
+    margin-bottom: var(--logoloop-gap);
+}
+
+.logoItem.scaleOnHover {
+    overflow: visible;
+}
+
+/* Icon wrapper */
+.iconWrapper {
+    display: inline-flex;
+    align-items: center;
+    transition: transform 300ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.iconWrapper.scaleOnHover:hover {
+    transform: scale(1.1);
+}
+
+/* Dark mode text color */
+.iconWrapper.darkMode {
+    color: #d1d5db;
+}
+
+.iconWrapper.lightMode {
+    color: #374151;
+}
+
+/* Image styles */
+.logoImage {
+    height: var(--logoloop-logoHeight);
+    width: auto;
+    display: block;
+    object-fit: contain;
+    user-select: none;
+    -webkit-user-drag: none;
+    pointer-events: none;
+    image-rendering: -webkit-optimize-contrast;
+    transition: transform 300ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.logoImage.scaleOnHover:hover {
+    transform: scale(1.1);
+}
+
+.logoImage.darkMode {
+    filter: brightness(0) invert(1);
+}
+
+/* Link styles */
+.logoLink {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: all 200ms linear;
+}
+
+.logoLink:hover {
+    opacity: 0.8;
+    transform: scale(1.05);
+}
+
+.logoLink:focus-visible {
+    outline: 2px solid;
+    outline-offset: 2px;
+}
+
+.logoLink.darkMode:focus-visible {
+    outline-color: #60a5fa;
+}
+
+.logoLink.lightMode:focus-visible {
+    outline-color: #3b82f6;
+}
+
+/* Fade overlays */
+.fadeOverlay {
+    pointer-events: none;
+    position: absolute;
+    z-index: 10;
+}
+
+.fadeLeft {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: clamp(24px, 8%, 120px);
+    background: linear-gradient(to right,
+            var(--logoloop-fadeColor, var(--logoloop-fadeColorAuto)) 0%,
+            rgba(0, 0, 0, 0) 100%);
+}
+
+.fadeRight {
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: clamp(24px, 8%, 120px);
+    background: linear-gradient(to left,
+            var(--logoloop-fadeColor, var(--logoloop-fadeColorAuto)) 0%,
+            rgba(0, 0, 0, 0) 100%);
+}
+
+.fadeTop {
+    top: 0;
+    left: 0;
+    right: 0;
+    height: clamp(24px, 8%, 120px);
+    background: linear-gradient(to bottom,
+            var(--logoloop-fadeColor, var(--logoloop-fadeColorAuto)) 0%,
+            rgba(0, 0, 0, 0) 100%);
+}
+
+.fadeBottom {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: clamp(24px, 8%, 120px);
+    background: linear-gradient(to top,
+            var(--logoloop-fadeColor, var(--logoloop-fadeColorAuto)) 0%,
+            rgba(0, 0, 0, 0) 100%);
+}

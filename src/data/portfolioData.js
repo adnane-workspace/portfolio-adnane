@@ -25,7 +25,7 @@ export const skills = [
         name: "Laravel",
         category: "Backend",
         level: 85,
-        icon: "FaReact"
+        icon: "FaLaravel"
     },
     {
         id: 2,
@@ -39,42 +39,42 @@ export const skills = [
         name: "MySQL",
         category: "Database",
         level: 85,
-        icon: "SiJavascript"
+        icon: "FaDatabase"
     },
     {
         id: 4,
         name: "Python",
         category: "Language",
         level: 75,
-        icon: "SiTypescript"
+        icon: "FaPython"
     },
     {
         id: 5,
         name: "Java",
         category: "Language",
         level: 70,
-        icon: "FaNodeJs"
+        icon: "FaJava"
     },
     {
         id: 6,
         name: "Docker",
         category: "DevOps",
         level: 70,
-        icon: "FaGitAlt"
+        icon: "FaDocker"
     },
     {
         id: 7,
         name: "PHP",
         category: "Backend",
         level: 85,
-        icon: "FaCss3Alt"
+        icon: "FaPhp"
     },
     {
         id: 8,
         name: "GitHub",
         category: "Tools",
         level: 80,
-        icon: "FaGitAlt"
+        icon: "FaGithub"
     },
     {
         id: 9,
@@ -88,30 +88,37 @@ export const skills = [
         name: "Keycloak",
         category: "Security",
         level: 70,
-        icon: "FaNodeJs"
+        icon: "SiOpenid"
     }
 ];
 
 export const projects = [
     {
+        id: 3,
+        title: "Portfolio Personnel",
+        description: "Portfolio professionnel moderne et responsive développé avec React et Vite. Présentation de mes compétences, projets et expériences avec animations fluides et mode sombre.",
+        image: "/images/project3.png",
+        tags: ["React", "Vite", "Framer Motion", "CSS"],
+        github: "https://github.com/adnane-workspace/portfolio",
+        demo: "https://portfolio-adnane.vercel.app",
+    },
+    {
         id: 1,
         title: "Gestion des Ressources Humaines",
         description: "Application web de gestion des ressources humaines avec Laravel, React et Keycloak. Gestion des employés, absences, présences et retards.",
-        image: "/images/project1.jpg",
-        tags: ["Laravel", "React", "Keycloak"],
+        image: "/images/project1.png",
+        tags: ["Laravel", "React"],
         github: "https://github.com/adnaneelmenouar/rh-management",
         demo: "https://demo-rh.example.com",
-        featured: true
     },
     {
         id: 2,
         title: "Gestion d'Hébergement",
         description: "Application web de gestion d'hébergement développée avec Laravel et MySQL. Automatisation des réservations, factures et suivi de disponibilité des chambres.",
         image: "/images/project2.jpg",
-        tags: ["Laravel", "MySQL"],
+        tags: ["Laravel", "MySQL", "PHP"],
         github: "https://github.com/adnaneelmenouar/hebergement",
         demo: "https://demo-hebergement.example.com",
-        featured: true
     }
 ];
 
@@ -187,7 +194,7 @@ export const about = {
     ],
     stats: [
         { label: "Années d'études", value: "3+" },
-        { label: "Projets réalisés", value: "10+" },
+        { label: "Projets réalisés", value: "4+" },
         { label: "Stages complétés", value: "3" },
         { label: "Technologies", value: "10+" }
     ]

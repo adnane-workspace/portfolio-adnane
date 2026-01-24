@@ -9,9 +9,6 @@ import Contact from './components/Contact/Contact';
 import Footer from './components/Footer/Footer';
 import styles from './App.module.css';
 
-/**
- * Composant principal de l'application
- */
 function App() {
     return (
         <ThemeProvider>
@@ -20,8 +17,8 @@ function App() {
 
                 <main className={styles.main}>
                     <Hero />
-                    <Skills />
                     <Projects />
+                    <Skills />
                     <Experience />
                     <Contact />
                 </main>

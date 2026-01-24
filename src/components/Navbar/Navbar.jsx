@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { FiMenu, FiX } from 'react-icons/fi';
 import ThemeToggle from '../ThemeToggle/ThemeToggle';
+import { useTheme } from '../../context/ThemeContext';
 import styles from './Navbar.module.css';
 
 /**
@@ -9,6 +10,7 @@ import styles from './Navbar.module.css';
 const Navbar = () => {
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+    const { theme } = useTheme();
 
     // Détecter le scroll pour changer le style de la navbar
     useEffect(() => {
@@ -34,12 +36,19 @@ const Navbar = () => {
         setIsMobileMenuOpen(false);
     };
 
+    // Logo selon le thème
+    const logoSrc = theme === 'dark' ? '/images/logo-dark.png' : '/images/logo-light.png';
+
     return (
         <nav className={`${styles.navbar} ${isScrolled ? styles.scrolled : ''}`}>
             <div className={styles.container}>
                 {/* Logo */}
                 <a href="#hero" className={styles.logo}>
-                    <img src="/images/logo.png" alt="adanaox" className={styles.logoImage} />
+                    <img
+                        src={logoSrc}
+                        alt="Adnane"
+                        className={styles.logoImage}
+                    />
                 </a>
 
                 {/* Navigation Desktop */}

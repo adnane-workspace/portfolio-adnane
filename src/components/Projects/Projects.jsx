@@ -48,9 +48,12 @@ const Projects = () => {
                         <Card hover={true} className={styles.projectCard}>
                             {/* Image du projet */}
                             <div className={styles.imageContainer}>
-                                <div className={styles.imagePlaceholder}>
-                                    <span className={styles.projectNumber}>#{project.id}</span>
-                                </div>
+                                <img
+                                    src={project.image}
+                                    alt={project.title}
+                                    className={styles.projectImage}
+                                    loading="lazy"
+                                />
                                 {project.featured && (
                                     <span className={styles.featuredBadge}>⭐ Featured</span>
                                 )}

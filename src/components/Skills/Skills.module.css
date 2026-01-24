@@ -1,72 +1,19 @@
-.grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 2rem;
+.loopContainer {
+    width: 100%;
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 3rem auto;
     padding: 2rem 0;
 }
 
-.skillItem {
-    display: flex;
-    justify-content: center;
-}
-
-.skillCard {
-    width: 80px;
-    height: 80px;
-    background: var(--color-card-bg);
-    border-radius: 16px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-    transition: all 0.3s ease;
-    border: 1px solid transparent;
-}
-
-.skillCard:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-    border-color: var(--color-primary);
-}
-
-.iconWrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--color-text-secondary);
-    transition: color 0.3s ease;
-}
-
-.skillCard:hover .iconWrapper {
-    color: var(--color-primary);
-}
-
-.icon {
-    font-size: 2.5rem;
-}
-
-/* Dark mode adjustments */
-[data-theme="dark"] .skillCard {
-    background: var(--color-bg-secondary);
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+.skillsLoop {
+    width: 100%;
+    padding: 1rem 0;
 }
 
 /* Responsive */
 @media (max-width: 768px) {
-    .grid {
-        gap: 1rem;
-    }
-
-    .skillCard {
-        width: 60px;
-        height: 60px;
-        border-radius: 12px;
-    }
-
-    .icon {
-        font-size: 2rem;
+    .loopContainer {
+        margin: 2rem auto;
+        padding: 1rem 0;
     }
 }
