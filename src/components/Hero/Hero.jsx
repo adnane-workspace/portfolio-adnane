@@ -45,10 +45,7 @@ const Hero = () => {
                 <div className={styles.mainContent}>
                     {/* Partie gauche - Texte */}
                     <div className={styles.textContent}>
-                        <motion.div className={styles.badge} variants={itemVariants}>
-                            👋 Bienvenue sur mon portfolio
-                        </motion.div>
-
+                        
                         <motion.h1 className={styles.title} variants={itemVariants}>
                             Bonjour, je suis <br />
                             <span className="gradient-text">{personalInfo.name}</span>

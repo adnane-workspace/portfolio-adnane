@@ -6,15 +6,15 @@ export const personalInfo = {
     tagline: "Étudiant motivé, passionné par le développement et les technologies",
     description: "Étudiant motivé, passionné par le développement et les technologies, cherchant à renforcer ses compétences à travers des projets et expériences pratiques.",
     email: "adnaneelmenouar7@gmail.com",
-    phone: "06 65 21 95 24",
+    phone: "06 63 21 95 24",
     location: "Lotissement Mamounia, Route de Setrou - Fès",
     avatar: "/images/avatar.jpg",
     resume: "/documents/cv.pdf"
 };
 
 export const socialLinks = {
-    github: "https://github.com/adnaneelmenouar",
-    linkedin: "https://www.linkedin.com/in/adnane-el-menouar",
+    github: "https://github.com/adnane-workspace",
+    linkedin: "https://www.linkedin.com/in/adnane-el-menouar-b0020230b/",
     twitter: "https://twitter.com/adnaneelmenouar",
     email: "mailto:adnaneelmenouar7@gmail.com"
 };
@@ -112,16 +112,6 @@ export const projects = [
         github: "https://github.com/adnaneelmenouar/hebergement",
         demo: "https://demo-hebergement.example.com",
         featured: true
-    },
-    {
-        id: 3,
-        title: "Site École Polytechnique",
-        description: "Participation à l'évolution du site principal de l'école en utilisant PHP, JavaScript, HTML et CSS.",
-        image: "/images/project3.jpg",
-        tags: ["PHP", "JavaScript", "HTML", "CSS"],
-        github: "https://github.com/adnaneelmenouar/ecole-site",
-        demo: "https://www.polymtl.ca",
-        featured: false
     }
 ];
 

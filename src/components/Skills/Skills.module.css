@@ -1,92 +1,72 @@
 .grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: var(--spacing-md);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
+.skillItem {
+    display: flex;
+    justify-content: center;
 }
 
 .skillCard {
-    text-align: center;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: var(--spacing-sm);
-}
-
-.iconWrapper {
     width: 80px;
     height: 80px;
+    background: var(--color-card-bg);
+    border-radius: 16px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: var(--gradient-primary);
-    border-radius: var(--radius-md);
-    margin-bottom: var(--spacing-xs);
-    transition: transform var(--transition-base);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+}
+
+.skillCard:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    border-color: var(--color-primary);
+}
+
+.iconWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-text-secondary);
+    transition: color 0.3s ease;
 }
 
 .skillCard:hover .iconWrapper {
-    transform: scale(1.1) rotate(5deg);
+    color: var(--color-primary);
 }
 
 .icon {
     font-size: 2.5rem;
-    color: white;
 }
 
-.skillName {
-    font-size: var(--font-size-xl);
-    font-weight: 700;
-    color: var(--color-text);
-    margin: 0;
-}
-
-.skillCategory {
-    font-size: var(--font-size-sm);
-    color: var(--color-text-secondary);
-    margin: 0;
-}
-
-/* Barre de progression */
-.progressBar {
-    width: 100%;
-    height: 8px;
+/* Dark mode adjustments */
+[data-theme="dark"] .skillCard {
     background: var(--color-bg-secondary);
-    border-radius: var(--radius-full);
-    overflow: hidden;
-    margin-top: var(--spacing-xs);
-}
-
-.progressFill {
-    height: 100%;
-    background: var(--gradient-primary);
-    border-radius: var(--radius-full);
-    transition: width 1s ease-out;
-}
-
-.level {
-    font-size: var(--font-size-sm);
-    font-weight: 600;
-    color: var(--color-primary);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
 }
 
 /* Responsive */
 @media (max-width: 768px) {
     .grid {
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        gap: var(--spacing-sm);
+        gap: 1rem;
     }
 
-    .iconWrapper {
+    .skillCard {
         width: 60px;
         height: 60px;
+        border-radius: 12px;
     }
 
     .icon {
         font-size: 2rem;
-    }
-
-    .skillName {
-        font-size: var(--font-size-lg);
     }
 }

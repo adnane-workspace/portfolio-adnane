@@ -66,29 +66,17 @@ const Skills = () => {
                     const IconComponent = iconMap[skill.icon];
 
                     return (
-                        <motion.div key={skill.id} variants={itemVariants}>
-                            <Card hover={true} className={styles.skillCard}>
+                        <motion.div
+                            key={skill.id}
+                            variants={itemVariants}
+                            className={styles.skillItem}
+                            title={skill.name}
+                        >
+                            <div className={styles.skillCard}>
                                 <div className={styles.iconWrapper}>
                                     {IconComponent && <IconComponent className={styles.icon} />}
                                 </div>
-
-                                <h3 className={styles.skillName}>{skill.name}</h3>
-
-                                <p className={styles.skillCategory}>{skill.category}</p>
-
-                                {/* Barre de progression */}
-                                <div className={styles.progressBar}>
-                                    <motion.div
-                                        className={styles.progressFill}
-                                        initial={{ width: 0 }}
-                                        whileInView={{ width: `${skill.level}%` }}
-                                        viewport={{ once: true }}
-                                        transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
-                                    />
-                                </div>
-
-                                <div className={styles.level}>{skill.level}%</div>
-                            </Card>
+                            </div>
                         </motion.div>
                     );
                 })}

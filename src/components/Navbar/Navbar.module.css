@@ -31,13 +31,15 @@
 
 /* Logo */
 .logo {
-    font-size: var(--font-size-xl);
-    font-weight: 800;
-    background: var(--gradient-primary);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    display: flex;
+    align-items: center;
     transition: transform var(--transition-fast);
+}
+
+.logoImage {
+    height: 40px;
+    width: auto;
+    object-fit: contain;
 }
 
 .logo:hover {

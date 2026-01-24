@@ -1,47 +1,47 @@
 /* ==================== VARIABLES CSS ==================== */
 :root {
   /* Couleurs Light Mode */
-  --color-bg: #ffffff;
-  --color-bg-secondary: #f8f9fa;
-  --color-text: #1a1a1a;
-  --color-text-secondary: #6c757d;
-  --color-primary: #6366f1;
-  --color-primary-dark: #4f46e5;
-  --color-accent: #8b5cf6;
-  --color-success: #10b981;
-  --color-border: #e5e7eb;
-  --color-card-bg: #ffffff;
-  --color-shadow: rgba(0, 0, 0, 0.1);
-  
+  --color-bg: #FAF8F5;
+  --color-bg-secondary: #F5F1EB;
+  --color-text: #2D1B0E;
+  --color-text-secondary: #6B5444;
+  --color-primary: #8B5A3C;
+  --color-primary-dark: #6D4428;
+  --color-accent: #A0674B;
+  --color-success: #7A9B76;
+  --color-border: #E0D5C7;
+  --color-card-bg: #FFFFFF;
+  --color-shadow: rgba(45, 27, 14, 0.1);
+
   /* Gradients */
-  --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  --gradient-accent: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-  --gradient-hero: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
-  
+  --gradient-primary: linear-gradient(135deg, #8B5A3C 0%, #6D4428 100%);
+  --gradient-accent: linear-gradient(135deg, #A0674B 0%, #8B5A3C 100%);
+  --gradient-hero: linear-gradient(135deg, #A0674B 0%, #8B5A3C 50%, #6D4428 100%);
+
   /* Spacing */
   --spacing-xs: 0.5rem;
   --spacing-sm: 1rem;
   --spacing-md: 2rem;
   --spacing-lg: 4rem;
   --spacing-xl: 6rem;
-  
+
   /* Border Radius */
   --radius-sm: 0.5rem;
   --radius-md: 1rem;
   --radius-lg: 1.5rem;
   --radius-full: 9999px;
-  
+
   /* Shadows */
   --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
   --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
   --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
   --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
-  
+
   /* Transitions */
   --transition-fast: 150ms ease-in-out;
   --transition-base: 300ms ease-in-out;
   --transition-slow: 500ms ease-in-out;
-  
+
   /* Typography */
   --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   --font-size-xs: 0.75rem;
@@ -58,17 +58,17 @@
 
 /* Dark Mode */
 [data-theme="dark"] {
-  --color-bg: #0f172a;
-  --color-bg-secondary: #1e293b;
-  --color-text: #f1f5f9;
-  --color-text-secondary: #94a3b8;
-  --color-primary: #818cf8;
-  --color-primary-dark: #6366f1;
-  --color-accent: #a78bfa;
-  --color-success: #34d399;
-  --color-border: #334155;
-  --color-card-bg: #1e293b;
-  --color-shadow: rgba(0, 0, 0, 0.3);
+  --color-bg: #1A120B;
+  --color-bg-secondary: #2D1F17;
+  --color-text: #F5EDE3;
+  --color-text-secondary: #C9B8A8;
+  --color-primary: #B8956A;
+  --color-primary-dark: #9A7B4F;
+  --color-accent: #D4A574;
+  --color-success: #8FAA88;
+  --color-border: #4A3528;
+  --color-card-bg: #2D1F17;
+  --color-shadow: rgba(0, 0, 0, 0.4);
 }
 
 /* ==================== RESET & BASE ==================== */
@@ -94,7 +94,12 @@ body {
 }
 
 /* ==================== TYPOGRAPHY ==================== */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-weight: 700;
   line-height: 1.2;
   color: var(--color-text);
@@ -163,6 +168,7 @@ a {
     opacity: 0;
     transform: translateY(20px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -174,6 +180,7 @@ a {
     opacity: 0;
     transform: translateX(-50px);
   }
+
   to {
     opacity: 1;
     transform: translateX(0);
@@ -185,6 +192,7 @@ a {
     opacity: 0;
     transform: translateX(50px);
   }
+
   to {
     opacity: 1;
     transform: translateX(0);
@@ -192,9 +200,12 @@ a {
 }
 
 @keyframes float {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translateY(0);
   }
+
   50% {
     transform: translateY(-20px);
   }
@@ -204,18 +215,23 @@ a {
   0% {
     background-position: 0% 50%;
   }
+
   50% {
     background-position: 100% 50%;
   }
+
   100% {
     background-position: 0% 50%;
   }
 }
 
 @keyframes pulse {
-  0%, 100% {
+
+  0%,
+  100% {
     opacity: 1;
   }
+
   50% {
     opacity: 0.5;
   }
@@ -244,7 +260,7 @@ a {
   .section {
     padding: var(--spacing-lg) 0;
   }
-  
+
   .container {
     padding: 0 var(--spacing-sm);
   }

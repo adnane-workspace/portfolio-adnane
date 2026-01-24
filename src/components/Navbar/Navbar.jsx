@@ -39,7 +39,7 @@ const Navbar = () => {
             <div className={styles.container}>
                 {/* Logo */}
                 <a href="#hero" className={styles.logo}>
-                    <span className={styles.logoText}>Portfolio</span>
+                    <img src="/images/logo.png" alt="adanaox" className={styles.logoImage} />
                 </a>
 
                 {/* Navigation Desktop */}
