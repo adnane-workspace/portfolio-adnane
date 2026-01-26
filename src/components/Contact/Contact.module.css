@@ -146,6 +146,17 @@
     font-weight: 600;
 }
 
+.errorMessage {
+    margin-top: var(--spacing-sm);
+    padding: var(--spacing-sm);
+    background: rgba(239, 68, 68, 0.1);
+    border: 1px solid #ef4444;
+    border-radius: var(--radius-md);
+    color: #ef4444;
+    text-align: center;
+    font-weight: 600;
+}
+
 /* Responsive */
 @media (max-width: 968px) {
     .container {

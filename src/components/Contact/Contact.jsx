@@ -28,14 +28,41 @@ const Contact = () => {
         e.preventDefault();
         setStatus('sending');
 
-        // Simulation d'envoi (remplacer par EmailJS ou votre backend)
-        setTimeout(() => {
-            console.log('Form data:', formData);
-            setStatus('success');
-            setFormData({ name: '', email: '', message: '' });
+        try {
+            // Créer un objet FormData avec toutes les données du formulaire
+            const formDataToSend = new FormData(e.target);
 
-            setTimeout(() => setStatus(''), 3000);
-        }, 1500);
+            // Ajouter des métadonnées supplémentaires
+            formDataToSend.append('subject', `Nouveau message de ${formData.name}`);
+            formDataToSend.append('from_name', formData.name);
+
+            // Envoyer à Web3Forms
+            const response = await fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                body: formDataToSend
+            });
+
+            const data = await response.json();
+
+            if (data.success) {
+                setStatus('success');
+                setFormData({ name: '', email: '', message: '' });
+
+                // Réinitialiser le formulaire HTML
+                e.target.reset();
+
+                // Réinitialiser le statut après 5 secondes
+                setTimeout(() => setStatus(''), 5000);
+            } else {
+                throw new Error(data.message || 'Erreur lors de l\'envoi');
+            }
+        } catch (error) {
+            console.error('Erreur lors de l\'envoi:', error);
+            setStatus('error');
+
+            // Réinitialiser le statut après 5 secondes
+            setTimeout(() => setStatus(''), 5000);
+        }
     };
 
     return (
@@ -90,6 +117,13 @@ const Contact = () => {
                     viewport={{ once: true }}
                     transition={{ duration: 0.6, delay: 0.2 }}
                 >
+                    {/* Champ caché pour Web3Forms - Remplacez par votre clé d'accès */}
+                    <input
+                        type="hidden"
+                        name="access_key"
+                        value="bbc73239-2f55-419f-a631-818b7f51da96"
+                    />
+
                     <div className={styles.formGroup}>
                         <label htmlFor="name" className={styles.label}>
                             <FiUser /> Nom
@@ -155,6 +189,12 @@ const Contact = () => {
                     {status === 'success' && (
                         <div className={styles.successMessage}>
                             ✓ Message envoyé avec succès !
+                        </div>
+                    )}
+
+                    {status === 'error' && (
+                        <div className={styles.errorMessage}>
+                            ✗ Erreur lors de l'envoi. Veuillez réessayer.
                         </div>
                     )}
                 </motion.form>
