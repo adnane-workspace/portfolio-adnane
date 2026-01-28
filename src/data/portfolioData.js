@@ -8,8 +8,8 @@ export const personalInfo = {
     email: "adnaneelmenouar7@gmail.com",
     phone: "06 63 21 95 24",
     location: "Lotissement Mamounia, Route de Setrou - Fès",
-    avatar: "/images/avatar.jpg",
-    resume: "/documents/cv.pdf"
+    avatar: "/portfolio-adnane/images/avatar.jpg",
+    resume: "/portfolio-adnane/documents/cv.pdf"
 };
 
 export const socialLinks = {
@@ -95,7 +95,7 @@ export const projects = [
         id: 3,
         title: "Portfolio Personnel",
         description: "Portfolio professionnel moderne et responsive développé avec React et Vite. Présentation de mes compétences, projets et expériences avec animations fluides et mode sombre.",
-        image: "/images/project3.png",
+        image: "/portfolio-adnane/images/project3.png",
         tags: ["React", "Vite", "Framer Motion", "CSS"],
         github: "https://github.com/adnane-workspace",
     },
@@ -103,7 +103,7 @@ export const projects = [
         id: 1,
         title: "Gestion des Ressources Humaines",
         description: "Application web de gestion des ressources humaines avec Laravel, React et Keycloak. Gestion des employés, absences, présences et retards.",
-        image: "/images/project1.png",
+        image: "/portfolio-adnane/images/project1.png",
         tags: ["Laravel", "React"],
         github: "https://github.com/adnane-workspace",
     },
@@ -111,7 +111,7 @@ export const projects = [
         id: 2,
         title: "Gestion d'Hébergement",
         description: "Application web de gestion d'hébergement développée avec Laravel et MySQL. Automatisation des réservations, factures et suivi de disponibilité des chambres.",
-        image: "/images/project2.jpg",
+        image: "/portfolio-adnane/images/project2.jpg",
         tags: ["Laravel", "MySQL", "PHP"],
         github: "https://github.com/adnane-workspace",
     }
