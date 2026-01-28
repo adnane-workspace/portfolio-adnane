@@ -86,26 +86,6 @@ const Contact = () => {
                         Je suis toujours ouvert aux nouvelles opportunités et collaborations.
                         N'hésitez pas à me contacter !
                     </p>
-
-                    <div className={styles.contactDetails}>
-                        <div className={styles.contactItem}>
-                            <FiMail className={styles.contactIcon} />
-                            <div>
-                                <div className={styles.contactLabel}>Email</div>
-                                <a href={`mailto:${personalInfo.email}`} className={styles.contactValue}>
-                                    {personalInfo.email}
-                                </a>
-                            </div>
-                        </div>
-
-                        <div className={styles.contactItem}>
-                            <FiUser className={styles.contactIcon} />
-                            <div>
-                                <div className={styles.contactLabel}>Localisation</div>
-                                <div className={styles.contactValue}>{personalInfo.location}</div>
-                            </div>
-                        </div>
-                    </div>
                 </motion.div>
 
                 {/* Formulaire */}
@@ -116,17 +96,19 @@ const Contact = () => {
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.6, delay: 0.2 }}
+                    aria-label="Formulaire de contact"
                 >
                     {/* Champ caché pour Web3Forms - Remplacez par votre clé d'accès */}
                     <input
                         type="hidden"
                         name="access_key"
                         value="bbc73239-2f55-419f-a631-818b7f51da96"
+                        aria-hidden="true"
                     />
 
                     <div className={styles.formGroup}>
                         <label htmlFor="name" className={styles.label}>
-                            <FiUser /> Nom
+                            <FiUser aria-hidden="true" /> Nom
                         </label>
                         <input
                             type="text"
@@ -137,12 +119,13 @@ const Contact = () => {
                             required
                             className={styles.input}
                             placeholder="Votre nom"
+                            aria-required="true"
                         />
                     </div>
 
                     <div className={styles.formGroup}>
                         <label htmlFor="email" className={styles.label}>
-                            <FiMail /> Email
+                            <FiMail aria-hidden="true" /> Email
                         </label>
                         <input
                             type="email"
@@ -152,13 +135,14 @@ const Contact = () => {
                             onChange={handleChange}
                             required
                             className={styles.input}
-                            placeholder="votre.email@example.com"
+                            placeholder="email@example.com"
+                            aria-required="true"
                         />
                     </div>
 
                     <div className={styles.formGroup}>
                         <label htmlFor="message" className={styles.label}>
-                            <FiMessageSquare /> Message
+                            <FiMessageSquare aria-hidden="true" /> Message
                         </label>
                         <textarea
                             id="message"
@@ -169,6 +153,7 @@ const Contact = () => {
                             rows="5"
                             className={styles.textarea}
                             placeholder="Votre message..."
+                            aria-required="true"
                         />
                     </div>
 
@@ -178,22 +163,23 @@ const Contact = () => {
                         type="submit"
                         disabled={status === 'sending'}
                         className={styles.submitButton}
+                        aria-label="Envoyer le message"
                     >
                         {status === 'sending' ? 'Envoi...' : (
                             <>
-                                <FiSend /> Envoyer le message
+                                <FiSend aria-hidden="true" /> Envoyer le message
                             </>
                         )}
                     </Button>
 
                     {status === 'success' && (
-                        <div className={styles.successMessage}>
+                        <div className={styles.successMessage} role="alert">
                             ✓ Message envoyé avec succès !
                         </div>
                     )}
 
                     {status === 'error' && (
-                        <div className={styles.errorMessage}>
+                        <div className={styles.errorMessage} role="alert">
                             ✗ Erreur lors de l'envoi. Veuillez réessayer.
                         </div>
                     )}

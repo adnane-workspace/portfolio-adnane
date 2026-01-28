@@ -12,8 +12,6 @@ const Footer = () => {
     const socials = [
         { icon: FiGithub, url: socialLinks.github, label: 'GitHub' },
         { icon: FiLinkedin, url: socialLinks.linkedin, label: 'LinkedIn' },
-        { icon: FiTwitter, url: socialLinks.twitter, label: 'Twitter' },
-        { icon: FiMail, url: socialLinks.email, label: 'Email' }
     ];
 
     return (
@@ -44,16 +42,7 @@ const Footer = () => {
                         );
                     })}
                 </div>
-
-                {/* Copyright */}
-                <div className={styles.copyright}>
-                    <p>
-                        © {currentYear} {personalInfo.name}. Tous droits réservés.
-                    </p>
-                    <p className={styles.madeWith}>
-                        Fait avec <FiHeart className={styles.heart} /> et React
-                    </p>
-                </div>
+                <h4>{personalInfo.phone}</h4>
             </div>
         </footer>
     );

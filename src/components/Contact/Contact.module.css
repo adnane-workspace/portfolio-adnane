@@ -169,3 +169,51 @@
         padding: var(--spacing-sm);
     }
 }
+
+/* Améliorations pour les petits écrans */
+@media (max-width: 480px) {
+    .subtitle {
+        font-size: var(--font-size-md);
+        margin-bottom: var(--spacing-md);
+    }
+
+    .container {
+        padding: var(--spacing-sm);
+        gap: var(--spacing-md);
+    }
+
+    .infoTitle {
+        font-size: var(--font-size-xl);
+    }
+
+    .infoText {
+        font-size: var(--font-size-base);
+    }
+
+    .form {
+        padding: var(--spacing-sm);
+        box-shadow: none;
+    }
+
+    .formGroup {
+        margin-bottom: var(--spacing-sm);
+    }
+
+    .label {
+        font-size: var(--font-size-xs);
+    }
+
+    .input, .textarea {
+        padding: 0.5rem;
+        font-size: var(--font-size-sm);
+    }
+
+    .submitButton {
+        padding: 0.5rem;
+        font-size: var(--font-size-sm);
+    }
+
+    .successMessage, .errorMessage {
+        font-size: var(--font-size-sm);
+    }
+}

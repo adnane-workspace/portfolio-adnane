@@ -15,8 +15,6 @@ export const personalInfo = {
 export const socialLinks = {
     github: "https://github.com/adnane-workspace",
     linkedin: "https://www.linkedin.com/in/adnane-el-menouar-b0020230b/",
-    twitter: "https://twitter.com/adnaneelmenouar",
-    email: "mailto:adnaneelmenouar7@gmail.com"
 };
 
 export const skills = [
@@ -99,8 +97,7 @@ export const projects = [
         description: "Portfolio professionnel moderne et responsive développé avec React et Vite. Présentation de mes compétences, projets et expériences avec animations fluides et mode sombre.",
         image: "/images/project3.png",
         tags: ["React", "Vite", "Framer Motion", "CSS"],
-        github: "https://github.com/adnane-workspace/portfolio",
-        demo: "https://portfolio-adnane.vercel.app",
+        github: "https://github.com/adnane-workspace",
     },
     {
         id: 1,
@@ -108,8 +105,7 @@ export const projects = [
         description: "Application web de gestion des ressources humaines avec Laravel, React et Keycloak. Gestion des employés, absences, présences et retards.",
         image: "/images/project1.png",
         tags: ["Laravel", "React"],
-        github: "https://github.com/adnaneelmenouar/rh-management",
-        demo: "https://demo-rh.example.com",
+        github: "https://github.com/adnane-workspace",
     },
     {
         id: 2,
@@ -117,8 +113,7 @@ export const projects = [
         description: "Application web de gestion d'hébergement développée avec Laravel et MySQL. Automatisation des réservations, factures et suivi de disponibilité des chambres.",
         image: "/images/project2.jpg",
         tags: ["Laravel", "MySQL", "PHP"],
-        github: "https://github.com/adnaneelmenouar/hebergement",
-        demo: "https://demo-hebergement.example.com",
+        github: "https://github.com/adnane-workspace",
     }
 ];
 
@@ -194,7 +189,7 @@ export const about = {
     ],
     stats: [
         { label: "Années d'études", value: "3+" },
-        { label: "Projets réalisés", value: "4+" },
+        { label: "Projets réalisés", value: "3+" },
         { label: "Stages complétés", value: "3" },
         { label: "Technologies", value: "10+" }
     ]
