@@ -12,6 +12,7 @@
   --color-border: #E0D5C7;
   --color-card-bg: #FFFFFF;
   --color-shadow: rgba(45, 27, 14, 0.1);
+  --color-primary-rgb: 139, 90, 60;
 
   /* Gradients */
   --gradient-primary: linear-gradient(135deg, #8B5A3C 0%, #6D4428 100%);
@@ -69,6 +70,7 @@
   --color-border: #4A3528;
   --color-card-bg: #2D1F17;
   --color-shadow: rgba(0, 0, 0, 0.4);
+  --color-primary-rgb: 184, 149, 106;
 }
 
 /* ==================== RESET & BASE ==================== */
