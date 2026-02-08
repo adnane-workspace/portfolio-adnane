@@ -105,6 +105,12 @@ const Navbar = () => {
                     </button>
                 </div>
 
+                {/* Overlay pour fermer le menu au clic extérieur */}
+                <div
+                    className={`${styles.overlay} ${isMobileMenuOpen ? styles.visible : ''}`}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                />
+
                 {/* Menu Mobile */}
                 <div className={`${styles.mobileMenu} ${isMobileMenuOpen ? styles.open : ''}`}>
                     <ul className={styles.mobileNavLinks}>
