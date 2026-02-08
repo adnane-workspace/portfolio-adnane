@@ -6,7 +6,7 @@ export const personalInfo = {
     tagline: "Étudiant motivé, passionné par le développement et les technologies",
     description: "Étudiant motivé, passionné par le développement et les technologies, cherchant à renforcer ses compétences à travers des projets et expériences pratiques.",
     email: "adnaneelmenouar7@gmail.com",
-    phone: "06 63 21 95 24",
+    phone: "+212 663-219524",
     location: "Lotissement Mamounia, Route de Setrou - Fès",
     avatar: "/portfolio-adnane/images/avatar.jpg",
     resume: "/portfolio-adnane/documents/cv.pdf"

@@ -42,7 +42,7 @@ const Footer = () => {
                         );
                     })}
                 </div>
-                <h4>{personalInfo.phone}</h4>
+                <h5>{personalInfo.phone}</h5>
             </div>
         </footer>
     );
