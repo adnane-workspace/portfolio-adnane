@@ -22,6 +22,18 @@ const Navbar = () => {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
+    // Fermer le menu mobile lors du redimensionnement vers desktop
+    useEffect(() => {
+        const handleResize = () => {
+            if (window.innerWidth > 768 && isMobileMenuOpen) {
+                setIsMobileMenuOpen(false);
+            }
+        };
+
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, [isMobileMenuOpen]);
+
     // Verrouiller le scroll quand le menu mobile est ouvert
     useEffect(() => {
         if (isMobileMenuOpen) {
@@ -100,10 +112,10 @@ const Navbar = () => {
                             <li
                                 key={item.label}
                                 style={{
-                                    transitionDelay: `${index * 100}ms`,
+                                    transitionDelay: `${index * 50 + 100}ms`,
                                     opacity: isMobileMenuOpen ? 1 : 0,
-                                    transform: isMobileMenuOpen ? 'translateY(0)' : 'translateY(20px)',
-                                    transition: 'all 0.5s ease'
+                                    transform: isMobileMenuOpen ? 'translateX(0)' : 'translateX(20px)',
+                                    transition: 'all 0.4s ease-out'
                                 }}
                             >
                                 <a
